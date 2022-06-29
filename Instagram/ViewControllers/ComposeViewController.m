@@ -28,7 +28,7 @@
 }
 */
 - (IBAction)didTapCloseCompose:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 

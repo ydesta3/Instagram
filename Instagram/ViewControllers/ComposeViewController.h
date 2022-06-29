@@ -20,10 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<ComposeViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIImageView *imageSelected;
 @property (weak, nonatomic) IBOutlet UITextField *postCaptionTextField;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIButton *shareButton;
-
-
 
 @end
 

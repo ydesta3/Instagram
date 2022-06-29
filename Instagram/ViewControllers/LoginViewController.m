@@ -8,7 +8,7 @@
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
-#import "TabBarViewController.h"
+//#import "TabBarViewController.h"
 
 
 
@@ -48,7 +48,7 @@
                //[self performSegueWithIdentifier:@"signUpSegue" sender:nil];
                SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-               TabBarViewController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];
+               UITabBarController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];
                sceneDelegate.window.rootViewController = tabbViewController;
            }
        }];
@@ -69,7 +69,7 @@
             //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
             SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            TabBarViewController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];
+            UITabBarController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];
             sceneDelegate.window.rootViewController = tabbViewController;
         }
     }];

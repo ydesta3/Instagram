@@ -343,9 +343,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="PostCaptionTextField" destination="k7A-E3-rkH" id="KYS-tl-sYo"/>
                         <outlet property="imageSelected" destination="6hY-5U-p4n" id="YqB-tG-v0G"/>
-                        <outlet property="shareButton" destination="GHf-67-PTa" id="2ae-DN-br3"/>
+                        <outlet property="postCaptionTextField" destination="k7A-E3-rkH" id="qxU-zu-WXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cb6-GN-uPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -362,7 +361,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="tabBarController" destination="cCd-h2-Beb" id="6PE-Iz-HNL"/>
                         <segue destination="j4h-Me-i9t" kind="relationship" relationship="viewControllers" id="AYb-CK-2Jn"/>
                         <segue destination="0Td-5l-Eci" kind="relationship" relationship="viewControllers" id="qvd-Q6-Fws"/>
                     </connections>

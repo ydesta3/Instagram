@@ -17,7 +17,6 @@
 		50321010286A531600A0AC3F /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5032100F286A531600A0AC3F /* InstagramTests.m */; };
 		5032101A286A531600A0AC3F /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50321019286A531600A0AC3F /* InstagramUITests.m */; };
 		5032101C286A531600A0AC3F /* InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5032101B286A531600A0AC3F /* InstagramUITestsLaunchTests.m */; };
-		5032102D286ACE7F00A0AC3F /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5032102C286ACE7F00A0AC3F /* TabBarViewController.m */; };
 		50321030286B649200A0AC3F /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5032102F286B649200A0AC3F /* HomeFeedViewController.m */; };
 		50321036286B65B200A0AC3F /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50321035286B65B200A0AC3F /* PostCell.m */; };
 		5032103C286C2E4E00A0AC3F /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5032103B286C2E4E00A0AC3F /* DetailsViewController.m */; };
@@ -68,8 +67,6 @@
 		50321015286A531600A0AC3F /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50321019286A531600A0AC3F /* InstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITests.m; sourceTree = "<group>"; };
 		5032101B286A531600A0AC3F /* InstagramUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITestsLaunchTests.m; sourceTree = "<group>"; };
-		5032102B286ACE7F00A0AC3F /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
-		5032102C286ACE7F00A0AC3F /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5032102E286B649200A0AC3F /* HomeFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
 		5032102F286B649200A0AC3F /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		50321034286B65B200A0AC3F /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
@@ -179,8 +176,6 @@
 			children = (
 				5032103A286C2E4E00A0AC3F /* DetailsViewController.h */,
 				5032103B286C2E4E00A0AC3F /* DetailsViewController.m */,
-				5032102B286ACE7F00A0AC3F /* TabBarViewController.h */,
-				5032102C286ACE7F00A0AC3F /* TabBarViewController.m */,
 				5032102E286B649200A0AC3F /* HomeFeedViewController.h */,
 				5032102F286B649200A0AC3F /* HomeFeedViewController.m */,
 				50320FF9286A531500A0AC3F /* LoginViewController.h */,
@@ -452,7 +447,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5032102D286ACE7F00A0AC3F /* TabBarViewController.m in Sources */,
 				50321030286B649200A0AC3F /* HomeFeedViewController.m in Sources */,
 				50320FFB286A531500A0AC3F /* LoginViewController.m in Sources */,
 				50321046286CC15500A0AC3F /* ComposeViewController.m in Sources */,
