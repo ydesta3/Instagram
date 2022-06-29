@@ -249,7 +249,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRe-gi-nQJ" userLabel="posted Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRe-gi-nQJ" userLabel="posted Image" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="113" width="414" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -301,13 +301,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-5U-p4n">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-5U-p4n">
                                 <rect key="frame" x="10" y="66" width="160" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ESx-bo-8CY"/>
+                                    <constraint firstAttribute="height" constant="160" id="LWL-e1-3iS"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7A-E3-rkH">
-                                <rect key="frame" x="178" y="66" width="227" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7A-E3-rkH">
+                                <rect key="frame" x="178" y="66" width="137.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -315,11 +317,20 @@
                                 <rect key="frame" x="20" y="234" width="136" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="select image"/>
+                                <connections>
+                                    <action selector="didSelectImage:" destination="4e4-u7-Vft" eventType="touchUpInside" id="YLj-rw-c8V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJ5-Fr-y44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6hY-5U-p4n" firstAttribute="leading" secondItem="yJ5-Fr-y44" secondAttribute="leading" constant="10" id="Qz7-mz-ENi"/>
+                            <constraint firstItem="k7A-E3-rkH" firstAttribute="top" secondItem="yJ5-Fr-y44" secondAttribute="top" constant="10" id="dse-to-AR4"/>
+                            <constraint firstItem="6hY-5U-p4n" firstAttribute="top" secondItem="yJ5-Fr-y44" secondAttribute="top" constant="10" id="iVw-O8-GYC"/>
+                            <constraint firstItem="k7A-E3-rkH" firstAttribute="leading" secondItem="6hY-5U-p4n" secondAttribute="trailing" constant="8" symbolic="YES" id="voR-5e-TsA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="93y-l2-md5">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="P77-hW-wci">
@@ -339,6 +350,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                <connections>
+                                    <action selector="didTapShare:" destination="4e4-u7-Vft" eventType="touchUpInside" id="FFs-qU-Ael"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
