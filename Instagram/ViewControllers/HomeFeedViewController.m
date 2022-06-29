@@ -12,6 +12,8 @@
 #import "SceneDelegate.h"
 #import "ComposeViewController.h"
 #import "PostCell.h"
+#import "DetailsViewController.h"
+
 
 @interface HomeFeedViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -71,8 +73,12 @@
         UINavigationController *navController = [segue destinationViewController];
         ComposeViewController *composeVC =(ComposeViewController*) navController.topViewController;
         composeVC.delegate = self;
-    } 
-
+    } else {
+        DetailsViewController *detailsController = [segue destinationViewController];
+        NSIndexPath *index = self.feedTableView.indexPathForSelectedRow;
+        Post *dataToPass = self.arrayOfPosts[index.row];
+        detailsController.post = dataToPass;
+    }
 
 }
 
@@ -88,9 +94,10 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PostCell *singlePostCell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
-    PFObject *post = self.arrayOfPosts[indexPath.row];
-    PFUser *currentUser = post[@"author"];
+    PostCell *singlePostCell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    Post *post = self.arrayOfPosts[indexPath.row];
+    singlePostCell.post = post;
+//    PFUser *currentUser = post[@"author"];
     
     return singlePostCell;
 }

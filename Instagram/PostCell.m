@@ -7,6 +7,10 @@
 
 #import "PostCell.h"
 #import "Parse/Parse.h"
+#import "UIImageview+AFNetworking.h"
+#import "DateTools.h"
+
+
 
 
 @implementation PostCell
@@ -23,11 +27,13 @@
 }
 
 
-//- (void)setPost:(Post *)post {
-//    _post = post;
-//    self.photoImageView.file = post[@"image"];
-//    [self.photoImageView loadInBackground];
-//}
+- (void)setPost:(Post *)post {
+    _post = post;
+    [self.postedImage setImageWithURL:[NSURL URLWithString:self.post.image.url]];
+    self.authorUsername.text = post.author.username;
+    self.postCaption.text = post.caption;
+    self.postTimeStamp.text = [post.createdAt shortTimeAgoSinceNow];
 
+}
 
 @end
