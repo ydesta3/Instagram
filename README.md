@@ -39,16 +39,14 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Designing and implementing an internal database 
+2. Get request efficiency for different databases
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+![InstagramWalkthrough (1)](https://user-images.githubusercontent.com/78214344/176785719-8cecefef-5f1e-4f09-9d4b-e337cb01fc4c.gif)
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [Kap](https://getkap.co/).
 
 ## Credits
 
