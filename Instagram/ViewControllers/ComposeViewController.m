@@ -7,6 +7,8 @@
 
 #import "ComposeViewController.h"
 #import "Post.h"
+#import "MBProgressHUD.h"
+
 
 
 
@@ -21,15 +23,6 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)didTapCloseCompose:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 
@@ -40,7 +33,7 @@
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
 
-    // The Xcode simulator does not support taking pictures, so let's first check that the camera is indeed supported on the device before trying to present it.
+    // First check that the camera is indeed supported on the device before trying to present it.
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
@@ -78,9 +71,12 @@
 }
 
 - (IBAction)didTapShare:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     UIImage *resizedImage = [self resizeImage:self.imageSelected.image withSize: CGSizeMake(300,300)];
     [Post postUserImage: resizedImage withCaption: self.postCaptionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
     }];
+    //[self dismissViewControllerAnimated:YES completion:nil]; cant see progress hud if card gets dismissed automatically (HUD is too fast)
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     
 }

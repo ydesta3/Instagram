@@ -34,7 +34,6 @@
        
        // set user properties
        newUser.username = self.usernameField.text;
-       //newUser.email = self.emailField.text;
        newUser.password = self.passwordField.text;
        
        // call sign up function on the object
@@ -44,7 +43,6 @@
            } else {
                NSLog(@"User registered successfully");
                // manually segue to logged in view
-               //[self performSegueWithIdentifier:@"signUpSegue" sender:nil];
                SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                UITabBarController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];
@@ -64,8 +62,7 @@
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             NSLog(@"User logged in successfully");
-            // display view controller that needs to shown after successful login
-            //[self performSegueWithIdentifier:@"loginSegue" sender:nil];
+            // manually segue to logged in view
             SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             UITabBarController *tabbViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabViewController"];

@@ -73,7 +73,7 @@
         UINavigationController *navController = [segue destinationViewController];
         ComposeViewController *composeVC =(ComposeViewController*) navController.topViewController;
         composeVC.delegate = self;
-    } else {
+    } else if([segue.identifier isEqualToString: @"toDetails"])  {
         DetailsViewController *detailsController = [segue destinationViewController];
         NSIndexPath *index = self.feedTableView.indexPathForSelectedRow;
         Post *dataToPass = self.arrayOfPosts[index.row];
@@ -98,6 +98,7 @@
     Post *post = self.arrayOfPosts[indexPath.row];
     singlePostCell.post = post;
 //    PFUser *currentUser = post[@"author"];
+    singlePostCell.selectionStyle = nil;
     
     return singlePostCell;
 }
